@@ -31,6 +31,7 @@ public class Product extends BaseEntity {
     @ToString.Exclude
     private ProductDetail productDetail;
 
+
     @ManyToOne
     @JoinColumn(name = "provider_id")
     @ToString.Exclude

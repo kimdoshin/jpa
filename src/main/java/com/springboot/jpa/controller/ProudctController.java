@@ -4,6 +4,7 @@ import com.springboot.jpa.data.dto.ChageProductDto;
 import com.springboot.jpa.data.dto.ProductDto;
 import com.springboot.jpa.data.dto.ProductResponseDto;
 import com.springboot.jpa.service.ProductService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +22,7 @@ public class ProudctController {
     }
 
     @GetMapping()
+    @ApiOperation(value = "그냥 테스트", notes = "노트")
     public ResponseEntity<ProductResponseDto> getProduct(Long number) {
         ProductResponseDto productResponseDto = productService.getProduct(number);
         return ResponseEntity.status(HttpStatus.OK).body(productResponseDto);
